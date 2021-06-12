@@ -42,6 +42,7 @@ class Juego {
     iluminarSecuencia() {
         for (let i = 0; i < this.nivel; i++) {
             const COLOR = this.tansformarNumeroAColor(this.secuencia[i])
+            console.log(COLOR)
             setTimeout(() => this.iluminarColor(COLOR), 1000 * i)
         }
     }
