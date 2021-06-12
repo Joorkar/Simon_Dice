@@ -11,6 +11,7 @@ class Juego {
         this.siguienteNivel()
     }
     inicializar() {
+        this.elegirColor = this.elegirColor.bind(this)
         BTN_EMPEZAR.classList.add('hide')
         this.nivel = 1
         this.colores = {
@@ -26,6 +27,7 @@ class Juego {
     
     siguienteNivel() {
         this.iluminarSecuencia()
+        this.agregarEventosClick()
     }
     tansformarNumeroAColor(numero) {
         switch (numero) {
@@ -42,7 +44,6 @@ class Juego {
     iluminarSecuencia() {
         for (let i = 0; i < this.nivel; i++) {
             const COLOR = this.tansformarNumeroAColor(this.secuencia[i])
-            console.log(COLOR)
             setTimeout(() => this.iluminarColor(COLOR), 1000 * i)
         }
     }
@@ -52,6 +53,15 @@ class Juego {
     }
     apagarColor(COLOR) {
         this.colores[COLOR].classList.remove('light')
+    }
+    agregarEventosClick() {
+        this.colores.CELESTE.addEventListener('click', this.elegirColor)
+        this.colores.VIOLETA.addEventListener('click', this.elegirColor)
+        this.colores.NARANJA.addEventListener('click', this.elegirColor)
+        this.colores.VERDE.addEventListener('click', this.elegirColor)
+    }
+    elegirColor(ev) {
+        console.log(this)
     }
 }
 function empezarJuego() {
