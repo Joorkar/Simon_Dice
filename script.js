@@ -92,7 +92,6 @@ class Juego {
         this.colores.VERDE.removeEventListener('click', this.elegirColor)
     }
     elegirColor(ev) {
-        console.log(ev)
         const NOMBRE_COLOR = ev.target.dataset.COLOR
         const NUMERO_COLOR = this.transformarColorANumero(NOMBRE_COLOR)
         this.iluminarColor(NOMBRE_COLOR)
