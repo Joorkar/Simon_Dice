@@ -92,7 +92,8 @@ class Juego {
         this.colores.VERDE.removeEventListener('click', this.elegirColor)
     }
     elegirColor(ev) {
-        const NOMBRE_COLOR = ev.target.dataset.COLOR
+        console.log(ev)
+        const NOMBRE_COLOR = ev.target.dataset.color
         const NUMERO_COLOR = this.transformarColorANumero(NOMBRE_COLOR)
         this.iluminarColor(NOMBRE_COLOR)
         if (NUMERO_COLOR === this.secuencia[this.subNivel]) {
@@ -121,6 +122,7 @@ class Juego {
                 this.inicializar()
             })
     }
+
 }
 function empezarJuego() {
     window.Juego = new Juego()
