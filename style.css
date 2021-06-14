@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 html {
     font-size: 62.5%;
@@ -22,7 +23,7 @@ body {
     max-height: 60vh;
     max-width: 60vh;
 }
-.color {
+.COLOR {
     width: 50%;
     height: 50%;
     display: inline-block;
@@ -33,28 +34,28 @@ body {
 .right {
     float: left;
 }
-.celeste {
+.CELESTE {
     background: #22a6b3;
 }
-.celeste.light {
+.CELESTE.light {
     background: #7ed6df;
 }
-.violeta {
+.VIOLETA {
     background: #be2edd;
 }
-.violeta.light {
+.VIOLETA.light {
     background: #e056fd;
 }
-.naranja {
+.NARANJA {
     background: #f0932b;
 }
-.naranja.light {
+.NARANJA.light {
     background: #ffbe76;
 }
-.verde {
+.VERDE {
     background: #6ab04c;
 }
-.verde.light {
+.VERDE.light {
     background: #badc58;
 }
 .btn-start {
