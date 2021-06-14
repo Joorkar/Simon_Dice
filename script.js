@@ -93,7 +93,7 @@ class Juego {
     }
     elegirColor(ev) {
         console.log(ev)
-        const NOMBRE_COLOR = ev.target.dataset.color
+        const NOMBRE_COLOR = ev.target.dataset.color // este 'color' va en minuscula por que el data en HTML lo reescribe a minuscula
         const NUMERO_COLOR = this.transformarColorANumero(NOMBRE_COLOR)
         this.iluminarColor(NOMBRE_COLOR)
         if (NUMERO_COLOR === this.secuencia[this.subNivel]) {
